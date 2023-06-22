@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Main {
-    public static int bossHealth = 1000;
+    public static int bossHealth = 700;
     public static int bossDamage = 50;
     public static String bossDefence;
     public static String[] heroesAttackType = {"Physical", "Magical", "Mental","Lekar"};
@@ -19,10 +19,11 @@ public class Main {
     public static void playRound() {
         roundNumber++;
         chooseBossDefence();
-        bossHits();
         medicLechit();
+        bossHits();
         heroesHit();
         printStatistics();
+
 
     }
 
@@ -51,22 +52,21 @@ public class Main {
         }
     }
 
-//HomeWork
-    public static void medicLechit(){
+//HomeWork 2
+    public static void medicLechit() {
         Random random = new Random();
-        int addHealth = random.nextInt(30) + 20;
-        Random a = new Random();
-        int vbor = a.nextInt(heroesHealth.length - 1);
-        for (int i = 0; i <heroesHealth.length - 1 ; i++) {
-            if (heroesHealth[i] < 100 && heroesHealth[3] > 0){
-                int zero = vbor;
-                heroesHealth[zero] += addHealth ;
+        int addHealth = random.nextInt(90) + 20;
+        for (int i = 0; i < heroesHealth.length - 1; i++) {
+            if (heroesHealth[i] < 100 && heroesHealth[3] > 0) {
+                System.out.println(addHealth);
+                heroesHealth [i] += addHealth;
 
+                break;
             }
         }
-
-
     }
+
+
 
     public static void bossHits() {
         for (int i = 0; i < heroesHealth.length; i++) {
