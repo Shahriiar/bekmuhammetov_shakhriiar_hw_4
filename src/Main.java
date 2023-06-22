@@ -20,7 +20,7 @@ public class Main {
         roundNumber++;
         chooseBossDefence();
         bossHits();
-        lechenie();
+        medicLechit();
         heroesHit();
         printStatistics();
 
@@ -51,8 +51,8 @@ public class Main {
         }
     }
 
-
-    public static void lechenie(){
+//HomeWork
+    public static void medicLechit(){
         Random random = new Random();
         int addHealth = random.nextInt(30) + 20;
         Random a = new Random();
