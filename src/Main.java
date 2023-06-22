@@ -58,9 +58,8 @@ public class Main {
         int addHealth = random.nextInt(90) + 20;
         for (int i = 0; i < heroesHealth.length - 1; i++) {
             if (heroesHealth[i] < 100 && heroesHealth[3] > 0) {
-                System.out.println(addHealth);
                 heroesHealth [i] += addHealth;
-
+                System.out.println("Медик вылечил " +addHealth +" HP " + heroesAttackType[i]);
                 break;
             }
         }
